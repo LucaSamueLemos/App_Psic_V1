@@ -5,7 +5,7 @@ from database import Database
 db = Database()
 
 def main_view(page: ft.Page):
-    emotions = ['😊 Feliz', '😢 Triste', '😡 Raiva', '😲 Surpreso', '😰 Ansioso', '😌 Calmo']
+    emotions = ['😊 Feliz', '😢 Triste', '😡 Raiva', '😲 Surpreso', '😰 Ansioso', '😌 Calmo', '🤮 Enjoado']
     
     selected_emotion = ft.Dropdown(
         options=[ft.dropdown.Option(e) for e in emotions],
