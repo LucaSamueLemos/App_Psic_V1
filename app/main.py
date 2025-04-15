@@ -3,6 +3,8 @@ from login_view import login_view
 from main_view import main_view
 from calendar_view import calendar_view
 from database import Database
+from history_view import history_view
+
 
 def main(page: ft.Page):
     # Configuração inicial do app
@@ -28,6 +30,11 @@ def main(page: ft.Page):
         # Tela do Calendário
         elif page.route == "/calendar":
             page.views.append(calendar_view(page))
+
+        #Tela do Historico
+        elif page.route == "/calendar":
+            page.views.append(history_view(page))
+
         
         page.update()
 

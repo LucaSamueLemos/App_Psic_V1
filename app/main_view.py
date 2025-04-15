@@ -57,12 +57,7 @@ def main_view(page: ft.Page):
 
     chat = ft.ListView(expand=True, spacing=5, auto_scroll=True, padding=10)
     notes_field = ft.TextField(label="Notas adicionais", multiline=True, expand=True)
-    user_message = ft.TextField(
-    label="Digite sua mensagem",
-    expand=True,
-    on_submit=lambda e: enviar_mensagem(user_message.value)
-)
-
+    user_message = ft.TextField(label="Digite sua mensagem", expand=True)
 
     def enviar_mensagem(texto):
         if texto.strip() == "":
@@ -99,7 +94,7 @@ def main_view(page: ft.Page):
             return
         
         if not selected_emotion.value:
-            show_snackbar("Selecione uma emoção antes de salvar!", error=True)
+            show_snackbar("Selecione uma emoção ant es de salvar!", error=True)
             return
         
         chat_text = "\n".join([
